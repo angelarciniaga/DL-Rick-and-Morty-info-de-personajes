@@ -1,4 +1,4 @@
-import Personajes from "./personajes";
+import Personajes from "./personajes.js";
 
 export default class DetallesPersonajes extends Personajes {
     constructor(id, name, status, species, gender, created, origin, location, episode) {
@@ -34,8 +34,17 @@ export default class DetallesPersonajes extends Personajes {
         this.setStatus(nuevoStatus)
     }
 
+    infoGeneral() {
+      return `
+      <ul>
+        <li><p>${this.id}</p></li>
+        <li><p>${this.species}</p></li>
+      </ul>
+      `
+    }
+
     infoModal(){
-        return resultados.innerHTML `
+        return resultados.innerHTML += `
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -48,12 +57,12 @@ export default class DetallesPersonajes extends Personajes {
               </div>
               <div class="modal-body">
                 <ul>
-                    <li>Status: </li>
-                    <li>Species: </li>
-                    <li>Type: </li>
-                    <li>Location: </li>
-                    <li>Created: </li>
-                    <li>Episode: </li>
+                    <li>Status: ${this.status} </li>
+                    <li>Species: ${this.species} </li>
+                    <li>Origin: ${this.origin} </li>
+                    <li>Location: ${this.location} </li>
+                    <li>Created: ${this.created} </li>
+                    <li>Episode: ${this.episode} </li>
                 </ul>
               </div>
               <div class="modal-footer">
@@ -66,3 +75,6 @@ export default class DetallesPersonajes extends Personajes {
         `
     }
 }
+
+/* let personajes1 = new DetallesPersonajes(id, name, status, species, gender, created, origin, location, episode);
+console.log(personajes1); */

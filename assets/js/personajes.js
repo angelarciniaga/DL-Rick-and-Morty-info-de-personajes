@@ -1,4 +1,3 @@
-
 export default class Personajes {
     constructor(id) {
         let _id = id;
@@ -15,3 +14,7 @@ export default class Personajes {
         this.setId(idNuevo);
     }
 }
+
+
+//let Per = new Personajes(id);
+
