@@ -1,3 +1,4 @@
+//Clase Padre
 export default class Personajes {
     constructor(id) {
         let _id = id;
@@ -5,16 +6,13 @@ export default class Personajes {
         this.setId = (idNuevo) => _id = idNuevo;
 
     }
-
-    get id(){
+//Métodos
+    getId(){
         return this.get_id();
     }
 
-    set id(idNuevo){
+    setid(idNuevo){
         this.setId(idNuevo);
     }
 }
-
-
-//let Per = new Personajes(id);
 

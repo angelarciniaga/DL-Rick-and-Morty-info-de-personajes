@@ -1,5 +1,5 @@
 import Personajes from "./personajes.js";
-
+//Clase hija
 export default class DetallesPersonajes extends Personajes {
     constructor(id, name, status, species, gender, created, origin, location, episode) {
         super(id);
@@ -19,7 +19,7 @@ export default class DetallesPersonajes extends Personajes {
         this.location = location;
         this.episode = episode;
     }
-
+//Métodos
     get name(){
         return this.getName();
     }
@@ -76,5 +76,4 @@ export default class DetallesPersonajes extends Personajes {
     }
 }
 
-/* let personajes1 = new DetallesPersonajes(id, name, status, species, gender, created, origin, location, episode);
-console.log(personajes1); */
+//let datosPersonajes = new DetallesPersonajes(idPersonajes, name, status, species, gender, created, origin, location, episode);
